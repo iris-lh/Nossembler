@@ -4,7 +4,7 @@ Nossembly is a little assembly-like toy language I threw together in the throes 
 
 Its Node.js implementation is part simulated CPU, part Turing Machine, and all good brow-furrowing fun for the whole family.
 
-The "Nossembler" has:
+The "Nossembler" includes:
 - Three registers, two for performing arithmetic operations and one for staging data to be written
 
 - A moveable cursor that can read from and write to the "tape"
