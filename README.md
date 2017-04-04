@@ -1,4 +1,4 @@
-# Nossembly
+# Nossembler
 
 Nossembly is a little assembly-like toy language I threw together in the throes of a feverish spell of sleep-deprived engrossment.
 
