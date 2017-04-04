@@ -1,0 +1,8 @@
+{
+  "name": "nossembly",
+  "version": "1.0.0",
+  "description": "An assembly like toy language implemented in Node.js",
+  "main": "index.js",
+  "author": "Isaac Helbling <imhelbling@gmail.com>",
+  "license": "MIT"
+}
