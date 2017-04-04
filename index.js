@@ -15,5 +15,5 @@ var memory     = [data, program]
 
 
 
-// Now to ruin a perfectly good piece of binary with base-ten digits.
+// Now to ruin a perfectly good piece of binary with our base-ten digits.
 displayResults(memory, nossemble(memory))
