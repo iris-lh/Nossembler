@@ -1,10 +1,12 @@
-var cloneArray = require('./helpers').cloneArray
+var cloneArray = require('./utils').cloneArray
 
-module.exports = (memory)=> {
+
+
+function Nossemble(memory) {
   var newMemory = cloneArray(memory)
   var reg       = {a:0,b:0,c:0}
   var cursor    = 0
-  var data      = newMemory[0]
+  var tape      = newMemory[0]
   var program   = newMemory[1]
 
   for (var i=0;i<program.length;i++) {
@@ -19,20 +21,20 @@ module.exports = (memory)=> {
       case 'MOV':
         cursor += parseInt(program[i+1])
           if ( cursor < 0 || cursor > newMemory[0].length - 1) {
-            throw('ERROR: cursor out of bounds')
+            throw('ERROR: cursor out of bounds.')
           }
         break;
 
       case 'LDA':
-        reg.a = data[cursor]
+        reg.a = tape[cursor]
         break;
 
       case 'LDB':
-        reg.b = data[cursor]
+        reg.b = tape[cursor]
         break;
 
       case 'SAV':
-        data[cursor] = reg.c
+        tape[cursor] = reg.c
         break;
 
       case 'SWPA':
@@ -98,3 +100,7 @@ module.exports = (memory)=> {
   }
   return newMemory
 }
+
+
+
+module.exports = Nossemble
